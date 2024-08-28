@@ -3,16 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>PreEntrega3-Hirigoyen</title>
 </head>
 <body>
     
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div class="container">
+        <h1>Gestión de Inventarios</h1>
 
+        <!-- Solicitar nombre de usuario al inicio -->
+        <div id="usernameContainer">
+            <h2>Ingrese su nombre de usuario</h2>
+            <input type="text" id="username" placeholder="Nombre de usuario" required />
+            <button id="startButton">Comenzar</button>
+        </div>
 
-    <script src="js/navegador.js"></script>
-    
+        <div id="mainContent" style="display: none;">
+            <div class="form-container">
+                <h2>Crear Artículo</h2>
+                <p>Crea tus propios artículos para gestionar tu inventario</p>
+                <form id="createItemForm">
+                    <label for="newItemName">Nombre del Artículo</label>
+                    <input type="text" id="newItemName" placeholder="Nombre" required />
+                    <button type="submit">Crear Artículo</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h2>Agregar o Eliminar Cantidad</h2>
+                <p>Gestiona tus inventarios, agrega nuevas unidades o elimina las ya existenes</p>
+                <form id="modifyItemForm">
+                    <label for="selectItem">Seleccionar Artículo</label>
+                    <select id="selectItem" required></select>
+
+                    <label for="itemQuantity">Cantidad</label>
+                    <input type="number" id="itemQuantity" placeholder="Cantidad" required />
+
+                    <button type="submit" id="addButton">Agregar Cantidad</button>
+                    <button type="button" id="subtractButton">Eliminar Cantidad</button>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <h2>Lista de Inventarios</h2>
+                <p>Busca y visualiza tu inventario actualizado</p>
+                <label for="filterInput">Busca el artículo que quieras</label>
+                <input type="text" id="filterInput" placeholder="Filtrar por artículo..." />
+                <table id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Última Modificación</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryBody">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="log-container">
+                <h2>Registro de Acciones</h2>
+                <p>Aquí podrás ver un registro de las últimas modificaciones</p>
+                <ul id="actionLog">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>

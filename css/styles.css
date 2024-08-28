@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #202124;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #1a73e8;
+    margin-bottom: 20px;
+}
+
+.form-container, .table-container, .log-container {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input, select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0 15px;
+    background-color: #ffffff;
+    color: #202124;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+button {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-sizing: border-box; 
+}
+
+button#subtractButton {
+    background-color: #e53935;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+th {
+    background-color: #f1f3f4;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+#actionLog {
+    list-style-type: none;
+    padding: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #f1f3f4;
+    border-radius: 4px;
+    margin: 0;
+}
+
+#actionLog li {
+    margin-bottom: 5px;
+    color: #1a73e8;
+    font-size: 14px;
+}
+
+#filterInput {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: calc(100% - 20px); 
+    background-color: #ffffff;
+    color: #202124;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
